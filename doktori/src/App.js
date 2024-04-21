@@ -16,190 +16,72 @@ function App() {
           className="d-none d-lg-flex 
         justify-content-end "
         >
-          <Button
-            className="btnkyqu"
-            style={{
-              width: "140px",
-              height: "40px",
-              background: "linear-gradient(270deg, #1b6be1 0%, #15cac4 100%)",
-              borderRadius: "10px",
-              border: "none",
-              color: "white",
-              fontSize: "15px",
-              fontWeight: "500",
-              textAlign: "center",
-              marginTop: "0.5rem",
-              paddingTop: "8px",
-            }}
-          >
-            Kyçu këtu
-          </Button>
+          <Button className="btnkyqu"> Kyçu këtu </Button>
         </Col>
       </Row>
 
-      <Row className="d-flex justify-content-center mt-5">
-        <p
-          style={{
-            width: "170px",
-            height: "40px",
-            borderRadius: "10px",
-            color: "#1b6be1",
-            background:
-              "linear-gradient(90deg, rgba(21, 202, 196, 0.06) 0%, rgba(27, 107, 225, 0.06) 100%)",
-            fontSize: "15px",
-            fontWeight: "500",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+      <Row className="d-flex justify-content-center mt-5 kujdesimj">
+        <p>
           Kujdes mjeksor 👨🏻‍⚕️
         </p>
       </Row>
 
       <Row>
-        <h1
-          style={{
-            fontSize: "64px",
-            fontWeight: "700",
-            textAlign: "center",
-            marginTop: "2rem",
-          }}
-        >
+        <h1 className="menaxho">
           Menaxho pacientet tuaj
         </h1>
-        <h1
-          className="d-none d-sm-block"
-          style={{
-            fontSize: "64px",
-            fontWeight: "700",
-            textAlign: "center",
-            marginTop: "2rem",
-          }}
-        >
+        <h1 className="d-none d-sm-block moshumb">
           Mos humb kohë
         </h1>
       </Row>
 
-      <Row className="d-flex justify-content-center mt-5">
-        <Button
-          className="btnkyqu "
-          style={{
-            width: "170px",
-            height: "50px",
-            background: "linear-gradient(270deg, #1b6be1 0%, #15cac4 100%)",
-            borderRadius: "10px",
-            border: "none",
-            color: "white",
-            fontSize: "16px",
-            fontWeight: "500",
-            boxShadow: "10px 10px 100px #1b6be1",
-            marginTop: "2rem",
-            alignItems: "center",
-            paddingTop: "12px",
-          }}
-        >
-          Kyçu këtu
-        </Button>
+      <Row className="d-flex justify-content-center mt-5 btnkyquketu">
+        <Button> Kyçu këtu </Button>
       </Row>
 
-      <Row className="d-flex justify-content-center">
+      <Row className="d-flex justify-content-center phones">
         <img
           src="images/3phones.png"
           alt="Phones"
           className="img-fluid d-none d-lg-block"
-          style={{
-            width: "auto",
-            height: "756px",
-            marginTop: "10vh",
-            zIndex: "-1",
-          }}
         />
 
         {/* Small screen: Display the second image */}
         <img
           src="images/mobilePhone.png"
           alt="Phones"
-          className="img-fluid d-block d-lg-none"
-          style={{
-            width: "380px",
-            marginTop: "10vh",
-            zIndex: "-1",
-          }}
+          className="img-fluid d-block d-lg-none minitel"
         />
       </Row>
 
-      <Row className="d-flex justify-content-center mt-5">
-        <h1
-          style={{
-            fontSize: "55px",
-            fontWeight: "700",
-            textAlign: "center",
-          }}
-        >
+      <Row className="d-flex justify-content-center mt-5 thshs">
+        <h1>
           Thjeshtë, Shpejtë & Sigurt
         </h1>
       </Row>
 
-      <Row
-        style={{
-          textAlign: "center",
-          fontWeight: "500",
-          marginTop: "3rem",
-        }}
-      >
+      <Row className="regjistrimi">
         <Col>
           {" "}
           <img
-            src="images/RegjistrimiVizitave.png"
-            alt="icon"
-            style={{
-              maxWidth: "20rem",
-              height: "auto",
-              marginBottom: "-2rem",
-            }}
-          />
+            src="images/RegjistrimiVizitave.png" alt="icon" />
           <h3>Regjistrimi i Vizitave</h3>
           <p>Vendosni dhe shikoni takimet me pacientët tuaj</p>
         </Col>
         <Col>
           {" "}
-          <img
-            src="images/ListaPacientave.png"
-            alt="icon"
-            style={{
-              maxWidth: "20rem",
-              height: "auto",
-              marginBottom: "-2rem",
-            }}
-          />
+          <img src="images/ListaPacientave.png" alt="icon"/>
           <h3>Listave e Pacientëve</h3>
           <p>Mbani evidencë të plotë të historisë mjekësore të pacientit</p>
         </Col>
         <Col>
-          <img
-            src="images/HistorikuMjeksor.png"
-            alt="icon"
-            style={{
-              maxWidth: "20rem",
-              height: "auto",
-              marginBottom: "-2rem",
-            }}
-          />
+          <img src="images/HistorikuMjeksor.png" alt="icon" />
           <h3>Historiku Mjekësor</h3>
           <p>Shikoni pacientet tuaj dhe gjeni informacionin që kërkoni</p>
         </Col>
       </Row>
 
-      <Row
-        style={{
-          borderTop: "1px solid grey ",
-          marginTop: "5rem",
-          paddingTop: "1rem",
-          width: "100vw",
-        }}
-      >
+      <Row className="menaxhotxt">
         <Col
           xs={12}
           md={6}
@@ -244,12 +126,9 @@ function App() {
         </Col>
       </Row>
       <Row
-        style={{
-          textAlign: "center",
-          fontWeight: "500",
-        }}
+        style={{textAlign: "center", fontWeight: "500",}}
       >
-        <p>© 2023 Doktori App LLC. All rights reserved.</p>
+        <p>© 2024 Doktori App LLC. All rights reserved.</p>
       </Row>
     </Container>
   );
