@@ -1,83 +1,86 @@
-.btnkyqu{
-    width: 140px;
-    height: 40px;
-    background: linear-gradient(270deg, #1b6be1 0%, #15cac4 100%);
-    border-radius: 10px;
-    border: none ;
-    color: #fff;
-    font-size: 15px ;
-    font-weight: 500 ;
-    text-align: center ;
-    margin-top: 0.5rem ;
-    padding-top: 8px ;
+.btnkyqu {
+  width: 140px;
+  height: 40px;
+  background: linear-gradient(270deg, #1b6be1 0%, #15cac4 100%);
+  border-radius: 10px;
+  border: none !important;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 8px;
 }
-.kujdesimj p{
-    width: 170px;
-    height: 50px;
-    border-radius: 10px;
-    color: #1b6be1;
-    background:linear-gradient(90deg, rgba(21, 202, 196, 0.06) 0%, rgba(27, 107, 225, 0.06) 100%);
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.kujdesimj p {
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  color: #1b6be1;
+  background: linear-gradient(
+    90deg,
+    rgba(21, 202, 196, 0.06) 0%,
+    rgba(27, 107, 225, 0.06) 100%
+  );
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.menaxho{
-    font-size: 64px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 2rem;
+.menaxho {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
 }
-.moshumb{
-    font-size: 64px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 2rem;
+.moshumb {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
 }
-.btnkyquketu button{
-    width: 170px;
-    height: 50px;
-    background: linear-gradient(270deg, #1b6be1 0%, #15cac4 100%);
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 10px 10px 100px #1b6be1;
-    margin-top: 2rem;
-    align-items: center;
+.btnkyquketu {
+  width: 170px;
+  height: 50px;
+  background: linear-gradient(270deg, #1b6be1 0%, #15cac4 100%);
+  border-radius: 10px;
+  border: none !important;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 10px 10px 100px #1b6be1;
+  margin-top: 2rem;
 }
 .phones img {
-    width: 1280px;
-    height: 756px;
-    margin-top: 10vh;
-    z-index: -1;
+  width: 1280px;
+  height: 756px;
+  margin-top: 10vh;
+  z-index: -1;
 }
-.minitel{
-    width: 380px;
-    margin-top: 10vh;
-    z-index: -1;
+.minitel {
+  width: 380px;
+  margin-top: 10vh;
+  z-index: -1;
 }
-.thshs h1{
-    font-size: 55px;
-    font-weight: 700;
-    text-align: center;
+.thshs h1 {
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
 }
-.regjistrimi{
-    text-align: center;
-    font-weight: 500;
-    margin-top: 3rem;
+.regjistrimi {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 3rem;
 }
 .regjistrimi img {
-    max-width: 20rem;
-    height: auto;
-    margin-bottom: -2rem;
+  max-width: 20rem;
+  height: auto;
+  margin-bottom: -2rem;
 }
-.menaxhotxt{
-    border-top: 1px solid grey ;
-    margin-top: 5rem;
-    padding-top: 1rem;
-    width: 100vw;
+.menaxhotxt {
+  border-top: 1px solid grey;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  width: 100vw;
 }

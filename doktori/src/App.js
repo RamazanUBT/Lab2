@@ -2,6 +2,7 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -16,27 +17,29 @@ function App() {
           className="d-none d-lg-flex 
         justify-content-end "
         >
-          <Button className="btnkyqu"> Kyçu këtu </Button>
+          <Button href="/signin" className="btnkyqu">
+            {" "}
+            Kyçu këtu{" "}
+          </Button>
         </Col>
       </Row>
 
       <Row className="d-flex justify-content-center mt-5 kujdesimj">
-        <p>
-          Kujdes mjeksor 👨🏻‍⚕️
-        </p>
+        <p>Kujdes mjeksor 👨🏻‍⚕️</p>
       </Row>
 
       <Row>
-        <h1 className="menaxho">
-          Menaxho pacientet tuaj
-        </h1>
-        <h1 className="d-none d-sm-block moshumb">
-          Mos humb kohë
-        </h1>
+        <h1 className="menaxho">Menaxho pacientet tuaj</h1>
+        <h1 className="d-none d-sm-block moshumb">Mos humb kohë</h1>
       </Row>
 
-      <Row className="d-flex justify-content-center mt-5 btnkyquketu">
-        <Button> Kyçu këtu </Button>
+      <Row className="mt-5">
+        {" "}
+        <Col className="d-flex justify-content-center">
+          <Link to="/signin">
+            <Button className="btnkyquketu">Kyçu këtu</Button>
+          </Link>
+        </Col>
       </Row>
 
       <Row className="d-flex justify-content-center phones">
@@ -55,22 +58,19 @@ function App() {
       </Row>
 
       <Row className="d-flex justify-content-center mt-5 thshs">
-        <h1>
-          Thjeshtë, Shpejtë & Sigurt
-        </h1>
+        <h1>Thjeshtë, Shpejtë & Sigurt</h1>
       </Row>
 
       <Row className="regjistrimi">
         <Col>
           {" "}
-          <img
-            src="images/RegjistrimiVizitave.png" alt="icon" />
+          <img src="images/RegjistrimiVizitave.png" alt="icon" />
           <h3>Regjistrimi i Vizitave</h3>
           <p>Vendosni dhe shikoni takimet me pacientët tuaj</p>
         </Col>
         <Col>
           {" "}
-          <img src="images/ListaPacientave.png" alt="icon"/>
+          <img src="images/ListaPacientave.png" alt="icon" />
           <h3>Listave e Pacientëve</h3>
           <p>Mbani evidencë të plotë të historisë mjekësore të pacientit</p>
         </Col>
@@ -125,9 +125,7 @@ function App() {
           </div>
         </Col>
       </Row>
-      <Row
-        style={{textAlign: "center", fontWeight: "500",}}
-      >
+      <Row style={{ textAlign: "center", fontWeight: "500" }}>
         <p>© 2024 Doktori App LLC. All rights reserved.</p>
       </Row>
     </Container>
