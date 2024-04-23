@@ -3,7 +3,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./SignInStyle.css";
+import "./SignStyles.css";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -84,7 +84,7 @@ const SignIn = () => {
         </Col>
 
         <Col className="d-none d-lg-block ">
-          <img src="images/BigLogo.png" className="BigLogo" />
+          <img src="images/BigLogo.png" className="BigLogo" alt="logo" />
         </Col>
       </Row>
     </Container>

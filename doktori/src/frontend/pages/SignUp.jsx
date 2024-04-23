@@ -3,6 +3,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./SignStyles.css";
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
@@ -87,9 +88,9 @@ const SignUp = () => {
             <Button type="submit" className="SignInBtn">
               Regjistrohu
             </Button>
-            <Link to="/signin" className="regjistrohubtn">
+            <Button type="submit" className="regjistrohubtn" href="/signin">
               Kyçu
-            </Link>
+            </Button>
           </Form>
         </Col>
 
@@ -98,6 +99,7 @@ const SignUp = () => {
             src="images/BigLogo.png"
             className="BigLogo"
             style={{ width: "550px", marginLeft: "0.5rem" }}
+            alt="Logo"
           />
         </Col>
       </Row>
