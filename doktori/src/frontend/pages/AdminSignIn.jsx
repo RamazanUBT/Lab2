@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SignStyles.css";
 
-const SignIn = () => {
-  const [email, setEmail] = useState("");
+const AdminSignIn = () => {
+  /* const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
@@ -34,7 +34,7 @@ const SignIn = () => {
       console.error("Error signing in doctor:", error);
     }
   };
-
+*/
   return (
     <Container className="d-flex justify-content-center">
       <Row className="MainRow">
@@ -43,8 +43,8 @@ const SignIn = () => {
           <Link to="/">
             <img src="images/Frame 1.png" alt="Logo" />{" "}
           </Link>
-          <h1>Menaxho pacientet tuaj</h1>
-          <Form className="d-flex flex-column mt-5" onSubmit={handleSubmit}>
+          <h1>Menaxho doktoret</h1>
+          <Form className="d-flex flex-column mt-5" /*onSubmit={handleSubmit}*/>
             <Form.Group controlId="formBasicEmail" className="FormGroup">
               <Form.Label className="FormLabel">Email</Form.Label>
               <Form.Control
@@ -54,8 +54,8 @@ const SignIn = () => {
                 style={{
                   height: "50px",
                 }}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                /* value={email}
+                onChange={(e) => setEmail(e.target.value)}*/
               />
             </Form.Group>
 
@@ -68,8 +68,8 @@ const SignIn = () => {
                 style={{
                   height: "50px",
                 }}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                /* value={password}
+                onChange={(e) => setPassword(e.target.value)}*/
               />
             </Form.Group>
 
@@ -81,8 +81,8 @@ const SignIn = () => {
               Regjistrohu
             </Button>
 
-            <a className="AdminBtn" href="/AdminSignIn">
-              Admin
+            <a className="AdminBtn" href="/signin">
+              Doktori
             </a>
           </Form>
         </Col>
@@ -95,4 +95,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default AdminSignIn;

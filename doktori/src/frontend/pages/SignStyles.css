@@ -44,6 +44,19 @@ h1 {
   padding-top: 12px;
 }
 
+.AdminBtn {
+  width: 350px;
+  height: 50px;
+  font-weight: 500;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  background: none;
+  margin-top: 2rem;
+  padding-top: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
 .BigLogo {
   width: 550px;
   margin-left: 0.5rem;

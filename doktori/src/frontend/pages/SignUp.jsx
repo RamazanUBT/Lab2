@@ -91,6 +91,10 @@ const SignUp = () => {
             <Button type="submit" className="regjistrohubtn" href="/signin">
               Kyçu
             </Button>
+
+            <a className="AdminBtn" href="/AdminSignIn">
+              Admin
+            </a>
           </Form>
         </Col>
 
