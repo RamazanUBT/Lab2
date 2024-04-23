@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./db/db");
+const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const doctorRoutes = require("./routes/doctorRoutes");
 
@@ -7,6 +8,9 @@ const app = express();
 
 //Connection to Mongo DB
 connectDB();
+
+// Middleware to enable CORS
+app.use(cors());
 
 // Middleware to parse JSON requests
 app.use(express.json());
