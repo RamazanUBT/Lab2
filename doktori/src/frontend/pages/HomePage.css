@@ -1,3 +1,4 @@
+
 .btnkyqu {
   width: 140px;
   height: 40px;
@@ -82,5 +83,5 @@
   border-top: 1px solid grey;
   margin-top: 5rem;
   padding-top: 1rem;
-  width: 100vw;
+  width: 100%;
 }

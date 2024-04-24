@@ -112,11 +112,11 @@ function HomePage() {
           xs={12}
           md={6}
           lg={4}
-          className="d-flex justify-content-center mt-2"
+          className="d-flex justify-content-center mt-2 "
         >
           {/* Legal */}
           <div
-            className="d-inline-block"
+            className="d-inline-block legal"
             style={{ marginLeft: "2rem", marginRight: "1rem" }}
           >
             <h4>Legal</h4>
