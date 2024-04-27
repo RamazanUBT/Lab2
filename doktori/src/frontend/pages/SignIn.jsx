@@ -25,8 +25,16 @@ const SignIn = () => {
       });
 
       if (response.ok) {
-        console.log("Doctor signed in successfully");
-        // Redirect to dashboard or any other page
+        const data = await response.json();
+        const token = data.token;
+        if (token) {
+          // Save token in local storage
+          localStorage.setItem("token", token);
+          // Redirect to dashboard or any other page
+          window.location.href = '/doktorilp';
+        } else {
+          console.error("Token not received");
+        }
       } else {
         console.error("Failed to sign in doctor");
       }

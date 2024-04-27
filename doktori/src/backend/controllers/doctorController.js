@@ -1,4 +1,7 @@
+const jwt = require("jsonwebtoken");
 const Doctor = require("../models/Doctor");
+
+const secretKey = require("crypto").randomBytes(64).toString("hex");
 
 // Doctor sign-up
 exports.signUpDoctor = async (req, res) => {
@@ -35,10 +38,11 @@ exports.signInDoctor = async (req, res) => {
     // Check if doctor with the given email and password exists
     const doctor = await Doctor.findOne({ email, password });
     if (doctor) {
-      // Doctor exists, send to specific page
-      // Replace the following line with your page redirect logic
-      // res.redirect('/doctor/dashboard');
-      res.send("Doctor signed in successfully"); // Temporary response
+      // Generate token
+      const token = jwt.sign({ email: doctor.email }, secretKey, { expiresIn: "1h" });
+
+      // Send token in response
+      res.json({ token });
     } else {
       // Doctor doesn't exist or incorrect credentials
       res.status(401).send("Email or password is incorrect");
