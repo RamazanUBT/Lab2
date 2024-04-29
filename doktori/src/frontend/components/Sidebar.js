@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./SidebarCss.css";
 import { Link, useResolvedPath, useMatch } from "react-router-dom";
 
-class Sidebar extends Component {
+export class Sidebar extends Component {
   render() {
     return (
       <div>
         <div className="navbar">
           <img src="images/Frame 1.png" alt="Logo" />
-          <CustomLink to="/patients">
+          <CustomLink to="/patientslist">
             <li className="button">
               <img src="images/Pacienti.png" alt="Pacienti" />
               Pacientet
@@ -16,7 +16,7 @@ class Sidebar extends Component {
           </CustomLink>
           <CustomLink to="/profiles">
             <li className="button">
-              <img src="images/Profili (2).png" alt="Profili" />
+              <img src="images/Profili.png" alt="Profili" />
               Profile
             </li>
           </CustomLink>

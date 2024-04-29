@@ -22,7 +22,7 @@ function HomePage() {
             {" "}
             Kyçu këtu{" "}
           </Button>
-          <Button href="/doktorilp" className="btnkyqu">
+          <Button href="/patientslist" className="btnkyqu">
             Lista Pacientav
           </Button>
         </Col>

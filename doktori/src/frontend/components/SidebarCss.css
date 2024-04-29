@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100vh;
+  border-right: 2px solid #0000001a;
+  justify-content: flex-start;
+  gap: 25px;
+  font-weight: 500;
+}
+.navbar img {
+  padding-bottom: 30px;
+}
+.button {
+  width: 230px;
+  height: 50px;
+  text-decoration: none;
+  list-style: none;
+  background-color: #0000000a;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 15px;
+  gap: 5px;
+}
+.button img {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: #00000066;
+}
+.navbar .active .button {
+  background: linear-gradient(90deg, #15cac4 0%, #1b6be1 100%);
+  color: #fff;
+}
