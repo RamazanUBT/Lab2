@@ -22,9 +22,6 @@ function HomePage() {
             {" "}
             Kyçu këtu{" "}
           </Button>
-          <Button href="/patientslist" className="btnkyqu">
-            Lista Pacientav
-          </Button>
         </Col>
       </Row>
 

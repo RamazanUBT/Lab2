@@ -1,0 +1,73 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 300px);
+  padding: 0 2rem;
+}
+
+.HeaderMobile {
+  display: flex;
+}
+
+.AddBtn {
+  min-width: 120px;
+  height: 50px;
+  background: linear-gradient(90deg, #15cac4 0%, #1b6be1 100%);
+  border-radius: 10px;
+  font-weight: 500 !important;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  color: white;
+  border: none !important;
+}
+
+.AddBtnMobile {
+  min-width: 120px;
+  height: 50px;
+  background: linear-gradient(90deg, #15cac4 0%, #1b6be1 100%);
+  border-radius: 10px;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  border: none !important;
+}
+
+.Searchbar {
+  width: 22vw;
+  height: 50px;
+  margin-right: 2rem;
+}
+
+/*MEDIA QUERIES*/
+
+/*Desktop Screen*/
+@media screen and (min-width: 927px) {
+  .AddBtnMobile {
+    display: none !important;
+  }
+}
+
+/*Mobile Screen*/
+@media screen and (max-width: 927px) {
+  .AddBtn {
+    display: none !important;
+  }
+
+  .ListaPacientave {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Header {
+    flex-direction: column;
+  }
+
+  .Searchbar {
+    margin-top: 1.5rem;
+    width: 100%;
+    margin-right: 0px;
+  }
+}

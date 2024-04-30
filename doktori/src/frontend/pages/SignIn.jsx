@@ -31,7 +31,7 @@ const SignIn = () => {
           // Save token in local storage
           localStorage.setItem("token", token);
           // Redirect to dashboard or any other page
-          window.location.href = '/doktorilp';
+          window.location.href = "/patientslist";
         } else {
           console.error("Token not received");
         }

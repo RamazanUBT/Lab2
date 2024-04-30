@@ -1,0 +1,75 @@
+.AnuloBtn {
+  min-width: 120px;
+  height: 50px;
+  background: none;
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  color: #00000066;
+  border: none;
+  justify-content: center;
+}
+
+.AddBtn {
+  min-width: 120px;
+  height: 50px;
+  background: linear-gradient(90deg, #15cac4 0%, #1b6be1 100%);
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  padding-left: 10px;
+  color: white;
+  border: none;
+  justify-content: center;
+}
+
+.AddBtnMobile {
+  min-width: 120px;
+  height: 50px;
+  background: linear-gradient(90deg, #15cac4 0%, #1b6be1 100%);
+  border-radius: 10px;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: start;
+  padding-left: 10px;
+  align-items: center;
+  color: white;
+  border: none !important;
+}
+
+.AnuloBtnMobile {
+  min-width: 120px;
+  height: 50px;
+  background: none !important;
+  border-radius: 10px;
+  font-weight: 500 !important;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  color: #00000066 !important;
+  border: none !important;
+}
+
+/*Desktop Screen*/
+@media screen and (min-width: 927px) {
+  .AddBtnMobile {
+    display: none !important;
+  }
+
+  .AnuloBtnMobile {
+    display: none !important;
+  }
+}
+
+/*Mobile Screen*/
+@media screen and (max-width: 927px) {
+  .AddBtn {
+    display: none !important;
+  }
+
+  .AnuloBtn {
+    display: none !important;
+  }
+}

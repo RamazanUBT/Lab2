@@ -5,6 +5,7 @@ import SignUp from "./frontend/pages/SignUp";
 import AdminSignIn from "./frontend/pages/AdminSignIn";
 import Sidebar from "./frontend/components/Sidebar";
 import PatientsList from "./frontend/pages/PatientsList";
+import PatientsListHeader from "./frontend/components/PatientsListHeader";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/adminsignin" element={<AdminSignIn />} />
           <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/patientslist" element={<PatientsList />} />
+          <Route path="/patientslistheader" element={<PatientsListHeader />} />
         </Routes>
       </BrowserRouter>
     </div>
