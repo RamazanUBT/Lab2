@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "../components/Sidebar";
 import PatientsListHeader from "../components/PatientsListHeader";
+import PatientsListTable from "../components/PatientsListTable";
 
 function PatientsList() {
   return (
@@ -9,7 +10,7 @@ function PatientsList() {
       <Sidebar />
       <div>
         <PatientsListHeader />
-        <h1>Lista</h1>
+        <PatientsListTable/>
       </div>
     </div>
   );

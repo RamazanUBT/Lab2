@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 .Header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +43,37 @@
   height: 50px;
   margin-right: 2rem;
 }
+
+/**************** Lista *******************/
+.listaDok{
+  background-color: #15CAC41A;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.listaDok table{
+  width: 100%;
+}
+.listaDok th {
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #00000066;
+}
+.listaDok td {
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+}
+
+
 
 /*MEDIA QUERIES*/
 
