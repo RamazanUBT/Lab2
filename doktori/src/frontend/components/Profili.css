@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.profilifirst{
+    width: calc(100vw - 300px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 49px 25px;
+}
+.profilifirst h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+.profilifirst button{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color:#0000000A;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color   : #00000066;
+}
+.profilifirst button img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.profiliinp{
+    
+}
+.tedhenat{
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1.5px ;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid;
+    border-image: linear-gradient(to top, #15CAC4, #1B6BE1) 0.5;
+
+}
+.tedhenat h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    width: 300px;
+}
+.profiliinp button{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #15CAC4 0%, #1B6BE1 100%);
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    border: none;
+}

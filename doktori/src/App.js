@@ -6,6 +6,7 @@ import AdminSignIn from "./frontend/pages/AdminSignIn";
 import Sidebar from "./frontend/components/Sidebar";
 import PatientsList from "./frontend/pages/PatientsList";
 import PatientsListHeader from "./frontend/components/PatientsListHeader";
+import Profiles from "./frontend/pages/Profiles";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/patientslist" element={<PatientsList />} />
           <Route path="/patientslistheader" element={<PatientsListHeader />} />
+          <Route path="/profiles" element={<Profiles/>} />
         </Routes>
       </BrowserRouter>
     </div>
