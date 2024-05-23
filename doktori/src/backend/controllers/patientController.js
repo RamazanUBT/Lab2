@@ -33,3 +33,19 @@ exports.addPatient = async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };
+
+exports.getPatientsByDoctorId = async (req, res) => {
+    const token = req.headers.authorization.split(' ')[1];
+    const decoded = jwt.verify(token, secretKey);
+    const doctorId = decoded.id;
+  
+    try {
+      // Fetch patients based on the doctor's ID
+      const patients = await Patient.find({ doctor: doctorId });
+      res.json(patients);
+    } catch (error) {
+      console.error('Error fetching patients:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+  
