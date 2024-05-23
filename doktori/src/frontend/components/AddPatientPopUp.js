@@ -1,19 +1,51 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import { Row, Form } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Modal, Form, Row } from "react-bootstrap";
 import "./PopUpStyles.css";
 
 function AddPatientPopUp() {
   const [show, setShow] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
+  const [birthYear, setBirthYear] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleAddPatient = async () => {
+    const token = localStorage.getItem("token");
+
+    try {
+      const response = await fetch("http://localhost:3000/api/patient/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          city,
+          address,
+          birthYear,
+        }),
+      });
+
+      if (response.ok) {
+        console.log("Patient added successfully");
+        handleClose();
+      } else {
+        console.error("Failed to add patient");
+      }
+    } catch (error) {
+      console.error("Error adding patient:", error);
+    }
+  };
+
   return (
     <>
       <Button className="AddBtn" onClick={handleShow}>
-        {" "}
         <img
           style={{ width: "32px", marginRight: "8px" }}
           src="images/AddBtn.png"
@@ -23,7 +55,6 @@ function AddPatientPopUp() {
       </Button>
 
       <Button className="AddBtnMobile" onClick={handleShow}>
-        {" "}
         <img
           style={{ width: "32px", marginRight: "8px" }}
           src="images/AddBtn.png"
@@ -50,7 +81,6 @@ function AddPatientPopUp() {
         <Modal.Body className="d-flex justify-content-center">
           <Form>
             <Row className="gap-3">
-              {" "}
               <Form.Group
                 className="mb-3"
                 controlId="FormBasicName"
@@ -66,12 +96,12 @@ function AddPatientPopUp() {
                   Emri
                 </Form.Label>
                 <Form.Control
-                  type="name"
+                  type="text"
                   placeholder="Filan"
-                  autoFocus
                   required
                   style={{ height: "50px", width: "165px" }}
-                  name="emri"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </Form.Group>
               <Form.Group
@@ -89,17 +119,16 @@ function AddPatientPopUp() {
                   Mbiemri
                 </Form.Label>
                 <Form.Control
-                  type="last name"
+                  type="text"
                   placeholder="Fisteku"
-                  autoFocus
                   required
                   style={{ height: "50px", width: "165px" }}
-                  name="mbiemri"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </Form.Group>
             </Row>
-
-            <Form.Group className="mb-3 " controlId="FormBasicCity">
+            <Form.Group className="mb-3" controlId="FormBasicCity">
               <Form.Label
                 style={{
                   fontWeight: "500",
@@ -110,12 +139,12 @@ function AddPatientPopUp() {
                 Komuna
               </Form.Label>
               <Form.Control
-                type="city"
+                type="text"
                 placeholder="Prishtin"
-                autoFocus
                 required
                 style={{ width: "350px", height: "50px" }}
-                name="komuna"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="FormBasicAddress">
@@ -129,12 +158,12 @@ function AddPatientPopUp() {
                 Adresa
               </Form.Label>
               <Form.Control
-                type="address"
+                type="text"
                 placeholder="rr.Bekim Berisha"
-                autoFocus
                 required
                 style={{ width: "350px", height: "50px" }}
-                name="adresa"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="FormBasicDate">
@@ -150,10 +179,10 @@ function AddPatientPopUp() {
               <Form.Control
                 type="text"
                 placeholder="dd/mm/yyyy"
-                autoFocus
                 required
                 style={{ width: "350px", height: "50px" }}
-                name="vitiLindjes"
+                value={birthYear}
+                onChange={(e) => setBirthYear(e.target.value)}
               />
             </Form.Group>
           </Form>
@@ -162,7 +191,7 @@ function AddPatientPopUp() {
           className="justify-content-center mb-4"
           style={{ borderTop: "none" }}
         >
-          <Button className="AddBtn" style={{ width: "350px" }}>
+          <Button className="AddBtn" style={{ width: "350px" }} onClick={handleAddPatient}>
             Shtoje
           </Button>
 
@@ -174,7 +203,7 @@ function AddPatientPopUp() {
             Anulo
           </Button>
 
-          <Button className="AddBtnMobile" style={{ width: "350px" }}>
+          <Button className="AddBtnMobile" style={{ width: "350px" }} onClick={handleAddPatient}>
             Shtoje
           </Button>
 
