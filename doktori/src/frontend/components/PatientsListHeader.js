@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormControl, InputGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PLHeaderStyle.css";
-import AddPatientPopUp from "./AddPatientPopUp";
+import AddPatientPopUp from "./PopUps/AddPatientPopUp";
 
 export class PatientsListHeader extends Component {
   render() {

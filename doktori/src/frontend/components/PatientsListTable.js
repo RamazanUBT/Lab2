@@ -1,6 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PLHeaderStyle.css";
+import AddAppointment from "./PopUps/AddAppointment";
+import EditPatient from "./PopUps/EditPatient";
+import DeletePatient from "./PopUps/DeletePatient";
 
 function PatientsListTable({ patients }) {
   return (
@@ -14,7 +17,15 @@ function PatientsListTable({ patients }) {
               <th>Komuna</th>
               <th>Adresa</th>
               <th>Viti Lindjes</th>
-              {/* Crud */}
+              <th>
+                <AddAppointment />
+              </th>
+              <th>
+                <EditPatient />
+              </th>
+              <th>
+                <DeletePatient />
+              </th>
             </tr>
           </thead>
           <tbody>

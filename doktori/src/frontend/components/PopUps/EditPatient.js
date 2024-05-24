@@ -1,68 +1,29 @@
-import React, { useState } from "react";
-import { Button, Modal, Form, Row } from "react-bootstrap";
-import "./PopUpStyles.css";
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { Form, Row } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function AddPatientPopUp() {
+function EditPatient() {
   const [show, setShow] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [city, setCity] = useState("");
-  const [address, setAddress] = useState("");
-  const [birthYear, setBirthYear] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleAddPatient = async () => {
-    const token = localStorage.getItem("token");
-
-    try {
-      const response = await fetch("http://localhost:3000/api/patient/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          city,
-          address,
-          birthYear,
-        }),
-      });
-
-      if (response.ok) {
-        console.log("Patient added successfully");
-        handleClose();
-      } else {
-        console.error("Failed to add patient");
-      }
-    } catch (error) {
-      console.error("Error adding patient:", error);
-    }
-  };
-
   return (
     <>
-      <Button className="AddBtn" onClick={handleShow}>
+      <Button className="EditBtn" onClick={handleShow}>
+        {" "}
         <img
-          style={{ width: "32px", marginRight: "8px" }}
-          src="images/AddBtn.png"
-          alt="icon"
+          style={{
+            width: "32px",
+            height: "30px",
+            marginRight: "8px",
+          }}
+          src="images/EditBtn.png"
+          alt="Edit"
         />
-        Shtoni
       </Button>
-
-      <Button className="AddBtnMobile" onClick={handleShow}>
-        <img
-          style={{ width: "32px", marginRight: "8px" }}
-          src="images/AddBtn.png"
-          alt="icon"
-        />
-        Shtoni
-      </Button>
-
       <Modal
         show={show}
         onHide={handleClose}
@@ -75,12 +36,13 @@ function AddPatientPopUp() {
           style={{ borderBottom: "none" }}
         >
           <Modal.Title style={{ fontWeight: "500", fontSize: "32px" }}>
-            Shtoni Pacientin
+            Ndryshoni Pacientin
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex justify-content-center">
           <Form>
             <Row className="gap-3">
+              {" "}
               <Form.Group
                 className="mb-3"
                 controlId="FormBasicName"
@@ -96,12 +58,11 @@ function AddPatientPopUp() {
                   Emri
                 </Form.Label>
                 <Form.Control
-                  type="text"
+                  type="name"
                   placeholder="Filan"
-                  required
+                  autoFocus
                   style={{ height: "50px", width: "165px" }}
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  name="emri"
                 />
               </Form.Group>
               <Form.Group
@@ -119,16 +80,16 @@ function AddPatientPopUp() {
                   Mbiemri
                 </Form.Label>
                 <Form.Control
-                  type="text"
+                  type="last name"
                   placeholder="Fisteku"
-                  required
+                  autoFocus
                   style={{ height: "50px", width: "165px" }}
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  name="mbiemri"
                 />
               </Form.Group>
             </Row>
-            <Form.Group className="mb-3" controlId="FormBasicCity">
+
+            <Form.Group className="mb-3 " controlId="FormBasicCity">
               <Form.Label
                 style={{
                   fontWeight: "500",
@@ -139,12 +100,11 @@ function AddPatientPopUp() {
                 Komuna
               </Form.Label>
               <Form.Control
-                type="text"
+                type="city"
                 placeholder="Prishtin"
-                required
+                autoFocus
                 style={{ width: "350px", height: "50px" }}
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
+                name="komuna"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="FormBasicAddress">
@@ -158,12 +118,11 @@ function AddPatientPopUp() {
                 Adresa
               </Form.Label>
               <Form.Control
-                type="text"
+                type="address"
                 placeholder="rr.Bekim Berisha"
-                required
+                autoFocus
                 style={{ width: "350px", height: "50px" }}
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                name="adresa"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="FormBasicDate">
@@ -179,10 +138,9 @@ function AddPatientPopUp() {
               <Form.Control
                 type="text"
                 placeholder="dd/mm/yyyy"
-                required
+                autoFocus
                 style={{ width: "350px", height: "50px" }}
-                value={birthYear}
-                onChange={(e) => setBirthYear(e.target.value)}
+                name="vitiLindjes"
               />
             </Form.Group>
           </Form>
@@ -191,8 +149,8 @@ function AddPatientPopUp() {
           className="justify-content-center mb-4"
           style={{ borderTop: "none" }}
         >
-          <Button className="AddBtn" style={{ width: "350px" }} onClick={handleAddPatient}>
-            Shtoje
+          <Button className="AddBtn" style={{ width: "350px" }}>
+            Ndryshoje
           </Button>
 
           <Button
@@ -203,10 +161,9 @@ function AddPatientPopUp() {
             Anulo
           </Button>
 
-          <Button className="AddBtnMobile" style={{ width: "350px" }} onClick={handleAddPatient}>
-            Shtoje
+          <Button className="AddBtnMobile" style={{ width: "350px" }} o>
+            Ndryshoje
           </Button>
-
           <Button
             className="AnuloBtnMobile"
             style={{ width: "350px" }}
@@ -220,4 +177,4 @@ function AddPatientPopUp() {
   );
 }
 
-export default AddPatientPopUp;
+export default EditPatient;

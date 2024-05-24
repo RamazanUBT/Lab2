@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .Header {
   display: flex;
@@ -45,15 +44,15 @@
 }
 
 /**************** Lista *******************/
-.listaDok{
-  background-color: #15CAC41A;
+.listaDok {
+  background-color: #15cac41a;
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
 }
-.listaDok table{
+.listaDok table {
   width: 100%;
 }
 .listaDok th {
@@ -73,7 +72,15 @@
   color: #000000;
 }
 
+.EditBtn {
+  background: none;
+  border: none;
+}
 
+.EditBtn:hover {
+  cursor: pointer;
+  background: none;
+}
 
 /*MEDIA QUERIES*/
 
