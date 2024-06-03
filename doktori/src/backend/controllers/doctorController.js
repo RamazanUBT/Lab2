@@ -42,3 +42,23 @@ exports.signInDoctor = async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 };
+
+exports.getDoctorProfile = async (req, res) => {
+  const authHeader = req.headers['authorization'];
+  if (!authHeader) {
+    return res.status(401).send('Access Token Required');
+  }
+
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, secretKey);
+    const doctor = await Doctor.findOne({ email: decoded.email }).select('-password');
+    if (!doctor) {
+      return res.status(404).send('Doctor not found');
+    }
+    res.json(doctor);
+  } catch (error) {
+    console.error('Error fetching doctor profile:', error);
+    res.status(500).send('Internal Server Error');
+  }
+};

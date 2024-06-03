@@ -6,5 +6,7 @@ const doctorController = require("../controllers/doctorController");
 router.post("/signup", doctorController.signUpDoctor);
 // Doctor sign-in
 router.post("/signin", doctorController.signInDoctor);
+//Doctor Profile
+router.get('/profile', doctorController.getDoctorProfile);
 
 module.exports = router;
